@@ -23,7 +23,7 @@
 ### Data Preparation / Preprocess
 
 - The data used for this project is 3D data, and the dataset used in the project comes in [dicom](https://www.dicomstandard.org/) format by default
-- However MONAI uses the [nifti](<https://docs.safe.com/fme/html/FME-Form-Documentation/FME-ReadersWriters/nifti/nifti.htm#:~:text=NIfTI%20(Neuroimaging%20Informatics%20Technology%20Initiative)%20is%20a%20data%20format%20for,fMRI>)%20and%20other%20medical%20images.) data format, so the data is initially converted from dicom to nifti
+- However MONAI uses the [nifti](<https://docs.safe.com/fme/html/FME-Form-Documentation/FME-ReadersWriters/nifti/nifti.htm#:~:text=NIfTI%20(Neuroimaging%20Informatics%20Technology%20Initiative)%20is%20a%20data%20format%20for,fMRI>) data format, so the data is initially converted from dicom to nifti
 - The dataset is then converted into slices to standardize the dataset, in case multiple patients produce multiple sizes of slices of their data, and to ensure that the training of the model (by either CPU or GPU) can handle the size of the dataset
 - The data is then split into test and training datasets
 - There is another function (`show_patient`) which optionally allows you to visualise the dataset for one patient, to confirm if the data reformatting worked correctly
